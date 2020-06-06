@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Button, View, Text, Image, StyleSheet, ScrollView } from 'react-native'
+import { View, Text, StyleSheet, ScrollView } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 
 export default class ContactScreen extends Component {
@@ -20,4 +20,3 @@ export default class ContactScreen extends Component {
     )
   }
 }
-v
