@@ -33,6 +33,7 @@ export default function Main() {
 					),
 				}}
 			/>
+
 		</Tab.Navigator>
 	);
 }
