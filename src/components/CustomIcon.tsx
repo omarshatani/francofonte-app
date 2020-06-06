@@ -1,5 +1,5 @@
 import React from "react";
-import { Image } from "react-native";
+import { Image, View, Text } from "react-native";
 
 interface Props {
 	iconName: string;
@@ -10,10 +10,13 @@ interface Props {
 export default function CustomIcon(props: Props) {
 	const { iconName, iconSize } = props;
 	return (
-		<Image
-			source={require(`../../assets/Icons/${iconName}.png`)}
-			fadeDuration={0}
-			style={{ width: iconSize, height: iconSize }}
-		/>
+		<View>
+			<Text>Icona</Text>
+		</View>
+		// <Image
+		// 	source={require(`../../assets/Icons/${iconName}.png`)}
+		// 	fadeDuration={0}
+		// 	style={{ width: iconSize, height: iconSize }}
+		// />
 	);
 }
