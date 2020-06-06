@@ -51,7 +51,7 @@ export const HomeScreen = ({ navigation }: any) => {
 		{
 			id: Math.random().toString(36),
 			title: "Ufficio tecnico",
-			iconName: "office-building",
+			iconName: "wrench",
 			iconPackage: "material-community",
 			iconSize: 30,
 			colors: ["#dc60e9", "#ba14e8"],
@@ -59,9 +59,9 @@ export const HomeScreen = ({ navigation }: any) => {
 		{
 			id: Math.random().toString(36),
 			title: "Comune",
-			iconName: "building",
-			iconPackage: "font-awesome5",
-			iconSize: 24,
+			iconName: "office-building",
+			iconPackage: "material-community",
+			iconSize: 30,
 			colors: ["#F88383", "#FB5050"],
 		},
 		{
@@ -83,16 +83,16 @@ export const HomeScreen = ({ navigation }: any) => {
 		{
 			id: Math.random().toString(36),
 			title: "Informazioni",
-			iconName: "building",
-			iconPackage: "font-awesome5",
+			iconName: "information-outline",
+			iconPackage: "material-community",
 			iconSize: 30,
 			colors: ["#F88383", "#FB5050"],
 		},
 		{
 			id: Math.random().toString(36),
 			title: "Protezione civile",
-			iconName: "building",
-			iconPackage: "font-awesome5",
+			iconName: "shield",
+			iconPackage: "material-community",
 			iconSize: 30,
 			colors: ["#F88383", "#FB5050"],
 		},
