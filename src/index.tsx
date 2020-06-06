@@ -12,7 +12,20 @@ import { createStackNavigator } from "@react-navigation/stack";
 const Tab = createMaterialBottomTabNavigator();
 const RootStack = createStackNavigator();
 
-export default function Main() {
+export default function RootStackScreen() {
+	return (
+		<RootStack.Navigator mode="modal">
+			<RootStack.Screen
+				name="Main"
+				component={Main}
+				options={{ headerShown: false }}
+			/>
+			<RootStack.Screen name="MyModal" component={ModalNewsDetailsScreen} />
+		</RootStack.Navigator>
+	);
+}
+
+function Main() {
 	return (
 		<Tab.Navigator
 			barStyle={{ backgroundColor: "#fff", borderWidth: 0 }}
@@ -40,18 +53,5 @@ export default function Main() {
 				}}
 			/>
 		</Tab.Navigator>
-	);
-}
-
-function RootStackScreen() {
-	return (
-		<RootStack.Navigator mode="modal">
-			<RootStack.Screen
-				name="Main"
-				component={ModalNewsDetailsScreen}
-				options={{ headerShown: false }}
-			/>
-			<RootStack.Screen name="MyModal" component={ModalNewsDetailsScreen} />
-		</RootStack.Navigator>
 	);
 }
