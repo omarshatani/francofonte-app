@@ -6,6 +6,8 @@ import SearchBox from './GlobalSearchBar'
 import ServicesList from './ServicesList'
 import Carousel from './NewsCarousel'
 
+import { createStackNavigator } from '@react-navigation/stack'
+
 interface ServiceItem {
   id: string
   title: string
@@ -197,11 +199,11 @@ export const NewsScreen = (props: any) => {
   )
 }
 
-export const NewsDetailsScreen = (props: any) => {
+export const ModalNewsDetailsScreen = (props: any) => {
   return (
     <SafeAreaView>
       <View>
-        <Text>News</Text>
+        <Text>News detail screen</Text>
       </View>
     </SafeAreaView>
   )
