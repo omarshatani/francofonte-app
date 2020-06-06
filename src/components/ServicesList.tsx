@@ -12,17 +12,20 @@ import {
 	FontAwesome5,
 } from "@expo/vector-icons";
 import { LinearGradient } from "expo-linear-gradient";
+import CustomIcon from "./CustomIcon";
 
-interface ServiceItem {
+interface Props {
+	data: Array<ServiceItem>;
+}
+
+type ServiceItem = {
 	id: string;
 	title: string;
 	iconName: string;
 	colors: Array<string>;
-}
+};
 
-export default function HorizontalServicesList(
-	props: any | Array<ServiceItem>
-) {
+export default function HorizontalServicesList(props: Props) {
 	const { data } = props;
 	return (
 		<FlatList
@@ -40,7 +43,7 @@ const Card = (item: ServiceItem | any) => {
 		item.item.iconPackage === "material-community" ? (
 			<MaterialCommunityIcons
 				name={item.item.iconName}
-				size={30}
+				size={item.item.iconSize}
 				color="white"
 			/>
 		) : item.item.iconPackage === "font-awesome5" ? (
@@ -50,9 +53,9 @@ const Card = (item: ServiceItem | any) => {
 				color="white"
 			/>
 		) : (
-			<Entypo
-				name={item.item.iconName}
-				size={item.item.iconSize}
+			<CustomIcon
+				iconName={item.item.iconName}
+				iconSize={item.item.iconSize}
 				color="white"
 			/>
 		);

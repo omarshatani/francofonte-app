@@ -197,11 +197,11 @@ export const NewsScreen = (props: any) => {
 	);
 };
 
-export const NewsDetailsScreen = (props: any) => {
+export const ModalNewsDetailsScreen = (props: any) => {
 	return (
 		<SafeAreaView>
 			<View>
-				<Text>News</Text>
+				<Text>News detail screen</Text>
 			</View>
 		</SafeAreaView>
 	);
