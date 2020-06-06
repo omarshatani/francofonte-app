@@ -82,7 +82,7 @@ const Card = (item: ServiceItem | any) => {
 					style={{
 						color: "white",
 						fontFamily: "Montserrat-SemiBold",
-						fontSize: 15,
+						fontSize: 14,
 					}}
 				>
 					{item.item.title}

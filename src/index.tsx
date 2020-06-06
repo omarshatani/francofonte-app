@@ -11,7 +11,7 @@ export default function Main() {
 		<Tab.Navigator
 			barStyle={{ backgroundColor: "#fff", borderWidth: 0 }}
 			labeled={false}
-			activeColor="#F8B683"
+			activeColor="#ed7d31"
 		>
 			<Tab.Screen
 				name="Home"
@@ -33,7 +33,6 @@ export default function Main() {
 					),
 				}}
 			/>
-
 		</Tab.Navigator>
 	);
 }
