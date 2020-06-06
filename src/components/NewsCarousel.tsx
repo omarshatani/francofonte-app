@@ -30,7 +30,6 @@ export default function Carousel(props: any) {
 }
 
 const CarouselItem = (item: any | CarouselItem) => {
-	console.log("carousel item", item);
 	return (
 		<TouchableNativeFeedback
 			background={TouchableNativeFeedback.SelectableBackground()}

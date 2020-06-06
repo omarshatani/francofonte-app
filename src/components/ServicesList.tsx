@@ -6,7 +6,11 @@ import {
 	FlatList,
 	TouchableNativeFeedback,
 } from "react-native";
-import { Entypo } from "@expo/vector-icons";
+import {
+	Entypo,
+	MaterialCommunityIcons,
+	FontAwesome5,
+} from "@expo/vector-icons";
 import { LinearGradient } from "expo-linear-gradient";
 
 interface ServiceItem {
@@ -32,7 +36,26 @@ export default function HorizontalServicesList(
 }
 
 const Card = (item: ServiceItem | any) => {
-	console.log("item", item);
+	const Icon =
+		item.item.iconPackage === "material-community" ? (
+			<MaterialCommunityIcons
+				name={item.item.iconName}
+				size={30}
+				color="white"
+			/>
+		) : item.item.iconPackage === "font-awesome5" ? (
+			<FontAwesome5
+				name={item.item.iconName}
+				size={item.item.iconSize}
+				color="white"
+			/>
+		) : (
+			<Entypo
+				name={item.item.iconName}
+				size={item.item.iconSize}
+				color="white"
+			/>
+		);
 	return (
 		<TouchableNativeFeedback
 			background={TouchableNativeFeedback.Ripple("", true)}
@@ -53,7 +76,7 @@ const Card = (item: ServiceItem | any) => {
 						height: 50,
 					}}
 				>
-					<Entypo name={item.item.iconName} size={30} color="white" />
+					{Icon}
 				</View>
 				<Text
 					style={{
