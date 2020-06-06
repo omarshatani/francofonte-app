@@ -53,7 +53,7 @@ export const HomeScreen = ({ navigation }: any) => {
 			title: "Ufficio tecnico",
 			iconName: "wrench",
 			iconPackage: "material-community",
-			iconSize: 25,
+			iconSize: 30,
 			colors: ["#dc60e9", "#ba14e8"],
 		},
 		{
