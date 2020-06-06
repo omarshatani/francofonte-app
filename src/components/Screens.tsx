@@ -5,6 +5,7 @@ import { LinearGradient } from 'expo-linear-gradient'
 import SearchBox from './GlobalSearchBar'
 import ServicesList from './ServicesList'
 import Carousel from './NewsCarousel'
+import { createDrawerNavigator, createAppContainer } from 'react-navigation'
 
 interface ServiceItem {
   id: string
@@ -141,27 +142,27 @@ export const NewsScreen = (props: any) => {
     <SafeAreaView>
       <View>
         <Text>News</Text>
+        <DetailNews />
       </View>
     </SafeAreaView>
   )
 }
 
-//screen per i dettagli delle news
-export const NewsDetailScreen = (props: any) => {
-  return (
-    <SafeAreaView>
-      <ScrollView>
-        <View>
-          <Text>Parte per img</Text>
-        </View>
-        <View>
-          <Text>Parte per il titolo</Text>
-          <Text>Parte per la descrizione</Text>
-        </View>
-      </ScrollView>
-    </SafeAreaView>
-  )
-}
+const AppNavigator = createDrawerNavigator(
+  {
+    Contact: {
+      screen: NewsDetailScreen,
+    },
+  },
+  {
+    initialRouteName: 'Home',
+    contentOptions: {
+      activeTintColor: '#e91e63',
+    },
+  },
+)
+
+const DetailNews = createAppContainer(AppNavigator)
 
 const styles = StyleSheet.create({
   container: {
