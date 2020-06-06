@@ -8,6 +8,7 @@ import {
 	TouchableNativeFeedback,
 	ImageBackground,
 } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 
 type CarouselItem = {
 	id: string;
@@ -30,9 +31,11 @@ export default function Carousel(props: any) {
 }
 
 const CarouselItem = (item: any | CarouselItem) => {
+	const navigation = useNavigation();
 	return (
 		<TouchableNativeFeedback
 			background={TouchableNativeFeedback.SelectableBackground()}
+			onPress={() => navigation.navigate("MyModal")}
 		>
 			<View style={{ ...styles.itemContainer, ...styles.shadow }}>
 				<ImageBackground

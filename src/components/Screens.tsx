@@ -22,7 +22,7 @@ interface CarouselItem {
 	imageUrl: string;
 }
 
-export const HomeScreen = (props: any) => {
+export const HomeScreen = ({ navigation }: any) => {
 	const data: Array<ServiceItem> = [
 		{
 			id: Math.random().toString(36),
@@ -97,7 +97,6 @@ export const HomeScreen = (props: any) => {
 			colors: ["#F88383", "#FB5050"],
 		},
 	];
-
 	const carouselData: Array<CarouselItem> = [
 		{
 			id: Math.random().toString(36),
@@ -177,7 +176,6 @@ export const HomeScreen = (props: any) => {
 							<Text style={{ fontFamily: "Montserrat-SemiBold", fontSize: 15 }}>
 								Popolari
 							</Text>
-
 							<Carousel data={carouselData} />
 						</View>
 					</ScrollView>
@@ -187,7 +185,7 @@ export const HomeScreen = (props: any) => {
 	);
 };
 
-export const NewsScreen = (props: any) => {
+export const NewsScreen = ({ navigation }: any) => {
 	return (
 		<SafeAreaView>
 			<View>
@@ -197,7 +195,7 @@ export const NewsScreen = (props: any) => {
 	);
 };
 
-export const ModalNewsDetailsScreen = (props: any) => {
+export const ModalNewsDetailsScreen = ({ navigation }: any) => {
 	return (
 		<SafeAreaView>
 			<View>
