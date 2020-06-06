@@ -46,7 +46,7 @@ export const HomeScreen = (props: any) => {
 			iconName: "account-group",
 			iconPackage: "material-community",
 			iconSize: 30,
-			colors: ["#9bf149", "#9bf149"],
+			colors: ["#65e960", "#2ae814"],
 		},
 		{
 			id: Math.random().toString(36),
@@ -54,7 +54,7 @@ export const HomeScreen = (props: any) => {
 			iconName: "office-building",
 			iconPackage: "material-community",
 			iconSize: 30,
-			colors: ["#e149f1", "#cd49f1"],
+			colors: ["#dc60e9", "#ba14e8"],
 		},
 		{
 			id: Math.random().toString(36),

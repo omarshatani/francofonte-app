@@ -82,7 +82,7 @@ const Card = (item: ServiceItem | any) => {
 					style={{
 						color: "white",
 						fontFamily: "Montserrat-SemiBold",
-						fontSize: 14,
+						fontSize: 15,
 					}}
 				>
 					{item.item.title}
@@ -96,7 +96,7 @@ const styles = StyleSheet.create({
 	card: {
 		display: "flex",
 		justifyContent: "space-between",
-		width: 130,
+		width: 150,
 		height: 120,
 		// marginHorizontal: 8,
 		marginRight: 15,
@@ -112,6 +112,6 @@ const styles = StyleSheet.create({
 		shadowOpacity: 0.25,
 		shadowRadius: 3.84,
 
-		elevation: 5,
+		elevation: 3,
 	},
 });
