@@ -1,0 +1,12 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>Copyright (C) 2020 by original authors @ fontello.com</metadata>
+<defs>
+<font id="fontello" horiz-adv-x="1000" >
+<font-face font-family="fontello" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
+<missing-glyph horiz-adv-x="1000" />
+<glyph glyph-name="police" unicode="&#xe82b;" d="M200 800c-25 0-50-25-50-50l0-50 350 0 0 50c0 25-25 50-50 50l-250 0z m-50-150l0-25c0-97 78-175 175-175s175 78 175 175l0 25-350 0z m-50-250c-75 0-100-125-100-200l0-300 134 0 341 500-375 0z m450 0l-341-500 441 0 0 300c0 75-25 200-100 200z" horiz-adv-x="650" />
+</font>
+</defs>
+</svg>

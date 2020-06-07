@@ -75,15 +75,15 @@ export const HomeScreen = ({ navigation }: any) => {
 		{
 			id: Math.random().toString(36),
 			title: "Ragioneria",
-			iconName: "building",
-			iconPackage: "font-awesome5",
+			iconName: "calculator-variant",
+			iconPackage: "material-community",
 			iconSize: 30,
 			colors: ["#F88383", "#FB5050"],
 		},
 		{
 			id: Math.random().toString(36),
 			title: "Informazioni",
-			iconName: "information-outline",
+			iconName: "information-variant",
 			iconPackage: "material-community",
 			iconSize: 30,
 			colors: ["#F88383", "#FB5050"],
