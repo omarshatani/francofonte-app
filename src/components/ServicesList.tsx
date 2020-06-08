@@ -1,18 +1,8 @@
-import * as React from "react";
-import {
-	View,
-	Text,
-	StyleSheet,
-	FlatList,
-	TouchableNativeFeedback,
-} from "react-native";
-import {
-	Entypo,
-	MaterialCommunityIcons,
-	FontAwesome5,
-} from "@expo/vector-icons";
-import { LinearGradient } from "expo-linear-gradient";
-import CustomIcon from "./CustomIcon";
+import * as React from 'react';
+import { View, Text, StyleSheet, FlatList, TouchableNativeFeedback } from 'react-native';
+import { Entypo, MaterialCommunityIcons, FontAwesome5 } from '@expo/vector-icons';
+import { LinearGradient } from 'expo-linear-gradient';
+import CustomIcon from './CustomIcon';
 
 interface Props {
 	data: Array<ServiceItem>;
@@ -32,7 +22,7 @@ export default function HorizontalServicesList(props: Props) {
 			data={data}
 			horizontal
 			renderItem={({ item }) => <Card item={item} />}
-			keyExtractor={item => item.id}
+			keyExtractor={(item) => item.id}
 			showsHorizontalScrollIndicator={false}
 		/>
 	);
@@ -40,54 +30,34 @@ export default function HorizontalServicesList(props: Props) {
 
 const Card = (item: ServiceItem | any) => {
 	const Icon =
-		item.item.iconPackage === "material-community" ? (
-			<MaterialCommunityIcons
-				name={item.item.iconName}
-				size={item.item.iconSize}
-				color="white"
-			/>
-		) : item.item.iconPackage === "font-awesome5" ? (
-			<FontAwesome5
-				name={item.item.iconName}
-				size={item.item.iconSize}
-				color="white"
-			/>
+		item.item.iconPackage === 'material-community' ? (
+			<MaterialCommunityIcons name={item.item.iconName} size={item.item.iconSize} color="white" />
+		) : item.item.iconPackage === 'font-awesome5' ? (
+			<FontAwesome5 name={item.item.iconName} size={item.item.iconSize} color="white" />
 		) : (
-			<CustomIcon
-				iconName={item.item.iconName}
-				iconSize={item.item.iconSize}
-				color="white"
-			/>
+			<CustomIcon iconName={item.item.iconName} iconSize={item.item.iconSize} color="white" />
 		);
 	return (
-		<TouchableNativeFeedback
-			background={TouchableNativeFeedback.Ripple("", true)}
-		>
-			<LinearGradient
-				style={styles.card}
-				colors={item.item.colors}
-				start={[0.8, 0.7]}
-			>
+		<TouchableNativeFeedback background={TouchableNativeFeedback.Ripple('', true)}>
+			<LinearGradient style={styles.card} colors={item.item.colors} start={[ 0.8, 0.7 ]}>
 				<View
 					style={{
-						display: "flex",
-						alignItems: "center",
-						justifyContent: "center",
-						backgroundColor: "rgba(255, 255, 255, 0.3)",
+						display: 'flex',
+						alignItems: 'center',
+						justifyContent: 'center',
+						backgroundColor: 'rgba(255, 255, 255, 0.3)',
 						borderRadius: 50,
 						width: 50,
-						height: 50,
-					}}
-				>
+						height: 50
+					}}>
 					{Icon}
 				</View>
 				<Text
 					style={{
-						color: "white",
-						fontFamily: "Montserrat-SemiBold",
-						fontSize: 15,
-					}}
-				>
+						color: 'white',
+						fontFamily: 'Montserrat-SemiBold',
+						fontSize: 15
+					}}>
 					{item.item.title}
 				</Text>
 			</LinearGradient>
@@ -97,8 +67,8 @@ const Card = (item: ServiceItem | any) => {
 
 const styles = StyleSheet.create({
 	card: {
-		display: "flex",
-		justifyContent: "space-between",
+		display: 'flex',
+		justifyContent: 'space-between',
 		width: 150,
 		height: 120,
 		// marginHorizontal: 8,
@@ -107,14 +77,14 @@ const styles = StyleSheet.create({
 		borderRadius: 15,
 		paddingVertical: 15,
 		padding: 15,
-		shadowColor: "#000",
+		shadowColor: '#000',
 		shadowOffset: {
 			width: 0,
-			height: 2,
+			height: 2
 		},
 		shadowOpacity: 0.25,
 		shadowRadius: 3.84,
 
-		elevation: 3,
-	},
+		elevation: 3
+	}
 });

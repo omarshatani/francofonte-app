@@ -1,14 +1,6 @@
-import * as React from "react";
-import {
-	View,
-	Text,
-	Image,
-	StyleSheet,
-	FlatList,
-	TouchableNativeFeedback,
-	ImageBackground,
-} from "react-native";
-import { useNavigation } from "@react-navigation/native";
+import * as React from 'react';
+import { View, Text, Image, StyleSheet, FlatList, TouchableNativeFeedback, ImageBackground } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
 type CarouselItem = {
 	id: string;
@@ -24,7 +16,7 @@ export default function Carousel(props: any) {
 			data={data}
 			horizontal
 			renderItem={({ item }) => <CarouselItem item={item} />}
-			keyExtractor={item => item.id}
+			keyExtractor={(item) => item.id}
 			showsHorizontalScrollIndicator={false}
 		/>
 	);
@@ -35,29 +27,23 @@ const CarouselItem = (item: any | CarouselItem) => {
 	return (
 		<TouchableNativeFeedback
 			background={TouchableNativeFeedback.SelectableBackground()}
-			onPress={() => navigation.navigate("MyModal")}
-		>
+			onPress={() => navigation.navigate('MyModal', { title: 'Titolo' })}>
 			<View style={{ ...styles.itemContainer, ...styles.shadow }}>
 				<ImageBackground
-					source={require("../../assets/Images/francofonte.jpg")}
+					source={require('../../assets/Images/francofonte.jpg')}
 					style={{ ...styles.imageContainer }}
 					imageStyle={styles.image}
-				></ImageBackground>
+				/>
 				<View style={styles.infoContainer}>
 					<Text
 						style={{
-							fontFamily: "Montserrat-SemiBold",
-							fontWeight: "bold",
-							fontSize: 15,
-						}}
-					>
+							fontFamily: 'Montserrat-SemiBold',
+							fontWeight: 'bold',
+							fontSize: 15
+						}}>
 						Titolo ahahaha
 					</Text>
-					<Text
-						style={{ fontFamily: "Montserrat", marginTop: 3, fontSize: 12 }}
-					>
-						Descrizione ahahaha
-					</Text>
+					<Text style={{ fontFamily: 'Montserrat', marginTop: 3, fontSize: 12 }}>Descrizione ahahaha</Text>
 				</View>
 			</View>
 		</TouchableNativeFeedback>
@@ -66,7 +52,7 @@ const CarouselItem = (item: any | CarouselItem) => {
 
 const styles = StyleSheet.create({
 	itemContainer: {
-		display: "flex",
+		display: 'flex',
 		width: 250,
 		height: 200,
 		// borderColor: "black",
@@ -74,32 +60,32 @@ const styles = StyleSheet.create({
 		marginVertical: 10,
 		marginRight: 15,
 		borderRadius: 10,
-		backgroundColor: "#fff",
+		backgroundColor: '#fff'
 	},
 	shadow: {
-		shadowColor: "#000",
+		shadowColor: '#000',
 		shadowOffset: {
 			width: 0,
-			height: 1,
+			height: 1
 		},
 		shadowOpacity: 0.22,
 		shadowRadius: 2.22,
 
-		elevation: 3,
+		elevation: 3
 	},
 	imageContainer: {
-		height: "65%",
-		width: "100%",
+		height: '65%',
+		width: '100%'
 	},
 	image: {
-		height: "100%",
-		width: "100%",
+		height: '100%',
+		width: '100%',
 		borderTopRightRadius: 10,
-		borderTopLeftRadius: 10,
+		borderTopLeftRadius: 10
 	},
 	infoContainer: {
-		height: "35%",
-		width: "100%",
-		padding: 10,
-	},
+		height: '35%',
+		width: '100%',
+		padding: 10
+	}
 });
